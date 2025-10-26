@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
+TARGET = lab2
+SRC = main.c
+
+all: $(TARGET)
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $<
+clean:
+	rm -f $(TARGET)
