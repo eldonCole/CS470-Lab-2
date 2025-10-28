@@ -5,18 +5,16 @@
 
 int main(void) {
     const char *commands[10][3] = {
-        // 2D array of command/argument pairs for 10 child processes
-        // each inner array represetns argument list for execvp
-        {"echo", "Hello Cole!", NULL}, //chile 1 prints greeting
-        {"ls", NULL, NULL}, // child 2 lists directory contents
-        {"pwd", NULL, NULL}, // child 3 prints working directory
-        {"date", NULL, NULL}, // child 4 prints date
-        {"whoami", NULL, NULL}, // child 5 prints current user
-        {"uname", "-a", NULL}, // child 6 prints system info
-        {"echo", "Process 7 running", NULL}, // child 7 prints messsage
-        {"echo", "Learning fork() and exec()", NULL}, // for and exec message
-        {"echo", "Child process demo", NULL}, // demo message
-        {"echo", "All processes complete.", NULL} //process completion message
+        {"echo", "Hello Cole!", NULL},        // Prints greeting
+        {"ls", NULL, NULL},                   // Lists directory contents
+        {"pwd", NULL, NULL},                  // Prints working directory
+        {"date", NULL, NULL},                 // Prints date and time
+        {"whoami", NULL, NULL},               // Prints current user
+        {"uname", "-a", NULL},                // Prints system info
+        {"id", NULL, NULL},                   // Prints user ID and group info
+        {"uptime", NULL, NULL},               // Shows how long the system has been running
+        {"hostname", NULL, NULL},            // Displays the system hostname
+        {"env", NULL, NULL}                  // Displays environment variables
     };
     // print the pid of the parent process before forking
     printf("Parent PID: %d\n", getpid());
